@@ -28,8 +28,6 @@ const imgList = [
     'img/product10-mobile.jpg'
 ]
 
-let imageOffset = 0
-
 function placeImage(url) {
   removeImage()
   const sliderElement = document.querySelector('.slideshow-container')
@@ -45,13 +43,7 @@ function removeImage() {
 }
 
 function createImage() {
-  //placeImage(imgList[imageOffset++ % imgList.length]) googla på modulo (mode eng)
-  placeImage(imgList[imageOffset])
-  imageOffset += 1
-  // If imageOffset is same or greater than length of image array, set it to zero or we get an error
-  if (imageOffset >= imgList.length) {
-      imageOffset = 0
-  }
+  placeImage(imgList[Math.floor(Math.random() * imgList.length)])
 
   // Start a timer for 10000ms, then call createImage
   setTimeout(createImage, 10000)
