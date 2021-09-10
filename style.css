@@ -1,16 +1,21 @@
 /*##############################################################################
  för Mobiiiil */
 
+ /* Färgvariabler */
+ :root {
+   --main-background-color: #E4572E;
+ }
 
 @media only screen and (min-width: 360px) {
   * {
     margin: 0;
     padding: 0;
+    /* box-sizing: border-box; */
     font-family: 'Roboto', sans-serif;
   }
 
   header {
-    background-color: #8ED1F6;
+    background-color: #E4572E;
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -50,6 +55,36 @@
   /*    padding: 5px;*/
   /*}*/
   /*!*  End of calles stuff för el hamburglar   *!*/
+  /* Nav bar */
+  .navigation-menu__buttons > li {
+    /* box-shadow:inset 0px 1px 0px 0px #000000; */
+    background-color: var(--main-background-color);
+    border-radius: 5px;
+    /* border:1px solid #124d77; */
+    display:inline-block;
+    cursor:pointer;
+    color: black;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 6px 24px;
+    text-decoration:none;
+    /* text-shadow:0px 1px 0px #154682; */
+    flex-grow: 1;
+  }
+
+  .navigation-menu__buttons > li:hover {
+    background-color: #B53C17;
+  }
+
+  .navigation-menu__search {
+    display: none;
+  }
+
+  .navigation-menu__buttons > li > a {
+    text-decoration: none;
+  }
+  /* Nav bar END */
   main {
     display: flex;
     justify-content: center;
@@ -57,11 +92,19 @@
     flex-direction: column;
   }
 
-  /* Bild på vinkande kvinna med dator i main */
+  /* Bilder för main */
   .main-picture {
     height: 400px;
     width: 100%;
+    background-color: gray;
   }
+
+  .div-container__images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+/* Bilder för main END */
 
   .text-main {
     text-align: center;
@@ -72,7 +115,7 @@
   /* Grejer för produktlista */
   .product-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 15px;
   }
 
@@ -80,7 +123,7 @@
     margin-bottom: 0.5em;
     text-align: center;
     text-transform: uppercase;
-    color: #8ED1F6;
+    color: #E4572E;
   }
 
   .product-list {
@@ -107,11 +150,10 @@
   }
 
   .card .text {
-    text-align: center;
+    text-align: left;
     font-size: 12px;
-    padding-bottom: 25px;
-    padding-top: 10px;
-    margin: 0 20px 0 20px;
+    padding: 10px 0 25px 0;
+    /* margin: 0 20px 0 20px; */
     font-weight: 100;
   }
 
@@ -128,25 +170,81 @@
 
   .card .buy-button:hover {
     background-color: #129AE2;
+    transition: 0.3s ease-out;
   }
 
   /* Grejer för produktlista END */
-  /* Grejer för footer */
-  footer {
 
-  }
+  /* Grejer för footer */
 
   .footer-container {
     width: 100%;
     background-color: #333333;
-    padding-bottom: 50px;
-
+    padding: 50px 0 50px 0;
   }
 
   .footer {
     width: 80%;
+    /* height: 40vh; */
+    background-color: #333333;
+    color: white;
+    margin: 0 auto;
   }
 
+  .footer-heading {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  .footer-heading h2 {
+    margin-bottom: 5px;
+  }
+
+  .footer-heading a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .footer-heading a:hover {
+    color: #129AE2;
+    transition: 0.3s ease-out;
+  }
+
+  .footer .email-form h2 {
+    margin-bottom: 10px;
+  }
+
+  .email-form {
+    background-color: #333333;
+  }
+
+  #footer-email {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  #footer-email-button {
+    width: 70px;
+    height: 40px;
+    background-color: #8ED1F6;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+  }
+
+  #footer-email-button:hover {
+    background-color: #129AE2;
+    transition: 0.3s ease-out;
+  }
   /* Grejer för footer END */
   ul {
     display: flex;
@@ -164,13 +262,9 @@
   }
 
   #logo {
-    height: 50px;
-    width: 50px;
-    padding-top: 25px;
-  }
-
-  #logo:hover {
-    background-color: gray;
+    height: 75px;
+    width: 100px;
+    padding: 10px 0 10px 0;
   }
 
   /* Class för ikoner i header */
@@ -181,6 +275,60 @@
     display: block;
   }
 
+}
+
+.hamburger-menu {
+  width: 35px;
+  height: 35px;
+  padding-top: 33px;
+}
+
+/* slider stuffs */
+
+.img-slideshow {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.img-slideshow .slideshow-container {
+  position: absolute;
+  width: 1000%;
+  height: 300px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: slider 100s infinite;
+
+}
+
+.img-slideshow .slideshow-container .slide {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+
+}
+
+.img-slideshow .slideshow-container .slide img {
+  display: block;
+  width: 400px;
+  height: 300px;
+}
+
+@keyframes slider {
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100%{left: 0}
+  10% {left: -100%}
+  20% {left: -200%}
+  30% {left: -300%}
+  40% {left: -400%}
+  50% {left: -500%}
+  60% {left: -600%}
+  70% {left: -700%}
+  80% {left: -800%}
+  90% {left: -900%};
 }
 
 
@@ -284,7 +432,12 @@ för desktop Calle*/
   }
 
   .navigation-menu__buttons li:hover {
-    border-bottom: #333333 solid 2px;
+    background-color: #129AE2;
+    transition: 0.3s ease-out;
+  }
+
+  .navigation-menu__buttons > li > a {
+    text-decoration: none;
   }
 
   .div-container__images {
@@ -301,11 +454,26 @@ för desktop Calle*/
 
   footer {
     grid-area: footer;
+    grid-template-areas: "header1 header2 header3 header4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
+  .footer {
+    display: grid;
+    grid-template-areas: "header1 header2 header3 header4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .email-form {
+    grid-area: header4;
+  }
   .main-picture {
     width: 255px;
     height: 255px
+  }
+
+  .hamburger-menu {
+    display: none;
   }
 
 }
