@@ -28,7 +28,10 @@ const imgList = [
     'img/product10-mobile.jpg'
 ]
 
+let imageOffset = 0
+
 function placeImage(url) {
+  removeImage()
   const sliderElement = document.querySelector('.slideshow-container')
   const imgElement = document.createElement('img')
   imgElement.setAttribute('class', 'slideshow__image')
@@ -36,4 +39,22 @@ function placeImage(url) {
   sliderElement.append(imgElement)
 }
 
-placeImage('img/product1-mobile.jpg')
+function removeImage() {
+  const imgElement = document.querySelector('.slideshow-container > img')
+  imgElement && imgElement.remove()
+}
+
+function createImage() {
+  //placeImage(imgList[imageOffset++ % imgList.length]) googla på modulo (mode eng)
+  placeImage(imgList[imageOffset])
+  imageOffset += 1
+  // If imageOffset is same or greater than length of image array, set it to zero or we get an error
+  if (imageOffset >= imgList.length) {
+      imageOffset = 0
+  }
+
+  // Start a timer for 10000ms, then call createImage
+  setTimeout(createImage, 10000)
+}
+
+createImage()
