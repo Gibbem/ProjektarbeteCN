@@ -7,19 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Gaming</title>
     <link href="style.css" rel="stylesheet">
-
 </head>
 
 <body>
-
     <header>
-        <!-- Här nedan ska Calles coola JS knapp vara -->
-        <!-- <img src="/img/hamburgare.png" class="hamburger-menu" alt="hamburger-icon" onclick="toggleMenu()"> -->
-        <!-- Nedan är logotyp/knapp för att komma tillbaka till startsidan -->
+    <!-- Här nedan ska Calles coola JS knapp vara -->
+    <!-- <img src="/img/hamburgare.png" class="hamburger-menu" alt="hamburger-icon" onclick="toggleMenu()"> -->
+    <!-- Nedan är logotyp/knapp för att komma tillbaka till startsidan -->
         <a href="/index.html"><img src="img/Canaro.png" id="logo" alt="logotype"></a>
-
-        <a href="/cart.html"><img src="img/cart.png" class="header-icons" alt="cart-icon"></a>
-        <a href="/index.html"><img src="img/search.png" class="header-icons" alt="search-icon"></a>
+        <div class="header-icons">
+            <a href="/cart.html"><img src="img/cart.png" class="icons" alt="cart-icon"></a>
+            <a href="/index.html"><img src="img/search.png" class="icons" alt="search-icon"></a>
+        </div>
     </header>
     <nav class="navigation-menu">
         <input class="navigation-menu__search" type="text" placeholder="Search">
@@ -28,7 +27,6 @@
             <li class="navigation-menu__buttons--design">Design</li>
             <li class="navigation-menu__buttons--collection">Collections</li>
             <li class="navigation-menu__buttons--co2">Co2</li>
-
         </ul>
     </nav>
     <!-- Nedan är logotyp/knapp för att komma tillbaka till startsidan END -->
@@ -38,6 +36,7 @@
         <div class="slideshow-container">
             <!-- img class="slideshow__image" src="img/product1-mobile.jpg" /-->
         </div>
+        
         <!-- Här har vi ett galet bildspel END -->
         <!-- <div class="div-container__images">
             <img src="img/main-left.jpg" alt="woman-waving" class="main-picture">
@@ -45,12 +44,9 @@
             <img src="img/main-right.jpg" alt="woman-surprised" class="main-picture">
             <img src="img/main-right.jpg" alt="woman-surprised" class="main-picture">
         </div> -->
-        <p class="text-main">ta en titt på våra</p>
-        <p class="text-main">storsäljare</p>
-
         <section class="product-list">
-            <h1 class="product-title">Most bought items</h1>
-
+            <p id="product-head1">Take a look at our most</p>
+            <p id="product-head2">sold products</p>
             <div class="product-container">
 
                 <!-- Produkt nummer ett -->
@@ -65,10 +61,10 @@
                         </picture>
                     </div>
 
-                    <div class="text">Modern smartwatch for your every training need.
+                    <div class="text">Modern smartwatch
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$200 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer ett END -->
@@ -83,10 +79,10 @@
                             <img src="img/product2-desktop.jpg" alt="nike-shoe">
                         </picture>
                     </div>
-                    <div class="text">Nike skor | Röd
+                    <div class="text">Nike shoes | Red
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$300 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer två END -->
@@ -101,11 +97,10 @@
                             <img src="img/product3-desktop.jpg" alt="stool">
                         </picture>
                     </div>
-                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maiores at
-                        consequatur debitis?
+                    <div class="text"> A classic stool.
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$150 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer tre END -->
@@ -120,11 +115,10 @@
                             <img src="img/product4-desktop.jpg" alt="toy-car">
                         </picture>
                     </div>
-                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maiores at
-                        consequatur debitis?
+                    <div class="text">A vintage toy car.
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$25 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer fyra END -->
@@ -139,11 +133,10 @@
                             <img src="img/product5-desktop.jpg" alt="black-bike">
                         </picture>
                     </div>
-                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maiores at
-                        consequatur debitis?
+                    <div class="text">Modern black bike.
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$3000 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer fem END -->
@@ -158,11 +151,10 @@
                             <img src="img/product6-desktop.jpg" alt="sunglasses">
                         </picture>
                     </div>
-                    <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum maiores at
-                        consequatur debitis?
+                    <div class="text">Cool sunglasses
                     </div>
                     <div>
-                        <button class="buy-button">buy now</button>
+                        <button class="buy-button">$100 - buy now</button>
                     </div>
                 </div>
                 <!-- Produkt nummer sex END -->
@@ -170,13 +162,22 @@
         </section>
     </main>
     <!-- Grejer för footer -->
+    <!-- <picture>
+        <source srcset="img/product1-mobile.jpg" media="(max-width: 480px)">
+        <source srcset="img/product1-tablet.jpg" media="(max-width: 768px)">
+        <source srcset="img/product1-desktop.jpg" media="(max-width: 1500px)">
+        <img src="img/product-smartwatch.jpg" alt="smartwatch">
+    </picture> -->
     <footer>
         <div class="footer-container">
             <div class="footer">
                 <div class="footer-logo">
-                    <img src="img/Canaro-white.png" alt="logo">
+                    <source srcset="img/Canaro-white-half.png" media="(max-width: 480px)">
+                    <source srcset="img/Canaro-white-half.png" media="(max-width: 768px)">
+                    <source srcset="img/Canaro-white.png" media="(max-width: 4000px)">
+                    <img src="img/Canaro-white-min.png" alt="logo">
                 </div>
-                <div class="footer-heading">
+                <div class="footer-heading1">
                     <h2>Company</h2>
                     <a href="#">About Us</a>
                     <a href="#">Vivid Seats Experience</a>
@@ -184,7 +185,7 @@
                     <a href="#">Press</a>
                     <a href="#">Careers</a>
                 </div>
-                <div class="footer-heading">
+                <div class="footer-heading2">
                     <h2>Service</h2>
                     <a href="#">Affiliate Program</a>
                     <a href="#">Sell Tickets</a>
@@ -192,7 +193,7 @@
                     <a href="#">Refer a Friend</a>
                     <a href="#">Rewards</a>
                 </div>
-                <div class="footer-heading">
+                <div class="footer-heading3">
                     <h2>Get Help</h2>
                     <a href="#">FAQs</a>
                     <a href="#">Accessibility</a>
@@ -205,7 +206,16 @@
                     <input type="email" placeholder="Enter email" id="footer-email">
                     <input type="submit" value="Sign up" id="footer-email-button">
                 </div>
+                <div class="social-media">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-pinterest"></a>
+                </div>
             </div>
+            <hr class="footer-hr">
+            <p class="copyright">Copyright © 2021 Canaro.com. All rights reserved.</p>
         </div>
     </footer>
     <!-- Grejer för footer END -->
