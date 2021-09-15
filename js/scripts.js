@@ -1,20 +1,3 @@
-
-
-// // ^Detta har Calle gjort
-
-// function toggleMenu() {
-//     const navElement = document.querySelector('nav.navigation-menu')
-//     if (navElement.classList.contains('show')) {
-//         navElement.classList.remove('show')
-//     } else {
-//         navElement.classList.add('show')
-//     }
-// }
-// img/product1-mobile.jpg
-// <img class="slideshow__image" src="img/product1-mobile.jpg" />
-// imgElement == <img />
-
-
 const imgList = [
     'img/product1-mobile.jpg',
     'img/product2-mobile.jpg',
