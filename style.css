@@ -32,11 +32,6 @@ ul {
   list-style: none;
 }
 
-/* button {
-  text-align: center;
-  border-radius: 0.1em;
-} */
-
 #logo {
   height: 57px;
   width: 100px;
@@ -98,7 +93,6 @@ ul {
   cursor: pointer;
   color: black;
   font-family: Arial;
-  font-weight: thin;
   font-size: 13px;
   padding: 0.6em;
   text-decoration:none;
@@ -432,7 +426,6 @@ för platta */
 
   .copyright {
     display: flex;
-    align-items: left;
   }
   
   .footer-logo {
@@ -466,20 +459,16 @@ för desktop Calle*/
   header {
     display: flex;
     justify-content: space-between;
-    
   }
 
   .header-icons {
     display: flex;
-    
   }
 
   /* Nav menu */
   nav.navigation-menu {
     width: 100%;
   }
-
-  
 
   .navigation-menu__buttons li:hover {
     background-color: var(--carolineBlue);
@@ -495,7 +484,6 @@ för desktop Calle*/
 
   }
 
-
   /* nav menu end*/
   main {
     grid-area: main;
@@ -508,7 +496,6 @@ för desktop Calle*/
 
   }
 
-  
   .footer-container .footer {
     width: 80%;
     display: grid;
@@ -525,8 +512,6 @@ för desktop Calle*/
   .footer a {
     font-size: 16px;
   }
-
- 
 
   .footer-heading1 {
     grid-area: main1;
@@ -554,7 +539,6 @@ för desktop Calle*/
 
   .copyright {
     display: flex;
-    align-items: left;
   }
   
   .footer-logo {
@@ -569,6 +553,4 @@ för desktop Calle*/
     width: 255px;
     height: 255px
   }
-
-  
 }
